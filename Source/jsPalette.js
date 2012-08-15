@@ -142,8 +142,8 @@ jsPalette.Popup = new Class({
         e.stop();
 
         this.paletteBox.show();
-        this.paletteBox.setStyle('left', e.client.x);
-        this.paletteBox.setStyle('top', Math.max(e.client.y - this.paletteBox.getSize().y, 0));
+        this.paletteBox.setStyle('left', e.page.x);
+        this.paletteBox.setStyle('top', Math.max(e.page.y - this.paletteBox.getSize().y, 0));
     },
 
     closePalette: function () {
