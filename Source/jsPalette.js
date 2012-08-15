@@ -98,7 +98,7 @@ jsPalette.Popup = new Class({
         this.options = options || {};
         this.options.onColorSelect = this.options.onColorSelect || $empty;
 
-        this.paletteBox = $('p-box');
+        this.paletteBox = new Element('div.jsp-popup', {'styles': {'display': 'none'}}).inject(document.body);
         this.paletteElement = new Element('div.js-palette').inject(this.paletteBox);
 
         var paletteOptions = this.options;
