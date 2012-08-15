@@ -45,6 +45,11 @@ body {
             new jsPalette.Popup('t2', { defaultColor: "#FF7400" });
             new jsPalette.Popup('t3', { showColorText: true });
             new jsPalette.Popup('t4', { onColorSelect: function(color) { alert(color); } });
+
+            new jsPalette.Popup('t5', { 
+                colors: ['#000000', '#ffffff', '#FF0000', '#00ff00', '#0000ff'],
+                defaultColor: '#0000ff'
+            });
         }
     }
 
@@ -62,6 +67,7 @@ body {
         <div> <span id='t2' class='p-link'> </span> Default Color</div>
         <div> <span id='t3' class='p-link'> </span> With Text</div>
         <div> <span id='t4' class='p-link'> </span> Select Event (shows popup)</div>
+        <div> <span id='t5' class='p-link'> </span> Non standard colors (with default)</div>
 
     </div>
 
