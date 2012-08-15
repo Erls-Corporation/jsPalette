@@ -24,6 +24,7 @@ var jsPalette = new Class({
         this.selectedElement = null;
         this.colorText = null;
 
+        this.element.addClass('js-palette');
         this.addColors();
 
         if (this.options.showColorText == true) {
