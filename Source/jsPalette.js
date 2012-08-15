@@ -96,7 +96,11 @@ var jsPalette = new Class({
     },
 
     getColor: function () {
-        return this.selectedElement.getStyle('backgroundColor');
+        if(this.selectedElement != null) {
+            return this.selectedElement.getStyle('backgroundColor');
+        } else {
+            return null;
+        }
     },
 
     getValue: function () {
