@@ -4,6 +4,14 @@ Element.implement({
    hide: function() {this.setStyle('display','none');}
 });
 
+
+// jsPalette for mootools
+//
+// Given a container element on the page, this class creates a color palette picker
+// so the user can selected from some predefined colors.
+//
+// See the readme for exact usage details.
+//
 var jsPalette = new Class({
     initialize: function (element, options) {
         this.element = $(element);
@@ -92,6 +100,15 @@ var jsPalette = new Class({
 
 });
 
+// jsPalette.Popup for mootools
+//
+// Show the standard color selector in a popup box placed at the location
+// the user click. The element passed to the constructor is the element that
+// triggers the popup to show when clicked. After a color is selected the back
+// ground color of that element is set to the selected color.
+//
+// See the readme for exact usage details
+//
 jsPalette.Popup = new Class({
     initialize: function (element, options) {
         this.linkElement = $(element);
