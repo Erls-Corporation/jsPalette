@@ -5,7 +5,7 @@ var jsPalettePopup = new Class({
         this.options.onColorSelect = this.options.onColorSelect || $empty;
 
         this.paletteBox = $('p-box');
-        this.paletteElement = $e('div.js-palette').inject(this.paletteBox);
+        this.paletteElement = new Element('div.js-palette').inject(this.paletteBox);
 
         var paletteOptions = this.options;
         paletteOptions.onClick = this.onColorSelect.bind(this);
@@ -58,11 +58,11 @@ var jsPalette = new Class({
     },
 
     addColorText: function () {
-        this.colorText = $e('div.jsp-desc', '#000000').inject(this.element);
+        this.colorText = new Element('div.jsp-desc', '#000000').inject(this.element);
     },
 
     addColors: function () {
-        this.container = $e('div');
+        this.container = new Element('div');
         this.element.grab(this.container);
 
         if ($type(this.options.colors)) {
@@ -73,7 +73,7 @@ var jsPalette = new Class({
     },
 
     addColor: function (colorString) {
-        $e('span', {
+        new Element('span', {
             'text': ' ',
             styles: { 'backgroundColor': colorString },
             events: { 'click': this.onClick.bind(this) }
