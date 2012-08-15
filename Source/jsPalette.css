@@ -33,3 +33,25 @@
     padding: 8px;
     position: absolute;
 } 
+
+@media handheld, only screen and (max-device-width:480px) {
+
+    .jsp-popup {
+        border-left: none;
+        border-right: none;
+        left: 0 !important;
+        margin:0;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    .jsp-popup  .jsp-cont {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .jsp-popup .jsp-desc {
+        text-align: center;
+    }
+
+}

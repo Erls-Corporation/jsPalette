@@ -39,7 +39,7 @@ var jsPalette = new Class({
     },
 
     addColors: function () {
-        this.container = new Element('div');
+        this.container = new Element('div.jsp-cont');
         this.element.grab(this.container);
 
         if ($type(this.options.colors)) {
