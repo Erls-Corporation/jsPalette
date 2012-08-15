@@ -16,7 +16,7 @@ var jsPalette = new Class({
     initialize: function (element, options) {
         this.element = $(element);
         this.options = options || {};
-        this.options.colors = this.options.colors || ["#EEEEEE", "#FFFF88", "#FF7400", "#CDEB8B", "#6BBA70", "#006E2E", "#C3D9FF", "#4096EE", "#356AA0", "#FF0096", "#B02B2C", "#000000"];
+        this.options.colors = this.options.colors || ["#EEEEEE", "#FFFF88", "#FF7400", "#CDEB8B", "#6BBA70", "#006E2E", "#C3D9FF", "#4096EE", "#356AA0", "#FF0096", "#FFFFFF", "#000000"];
         this.options.onClick = this.options.onClick || $empty;
         this.options.defaultColor = this.options.defaultColor || this.options.colors[0];
         this.options.showColorText = this.options.showColorText === true ? true : false;
