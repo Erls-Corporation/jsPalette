@@ -19,11 +19,17 @@ body {
     font-family: arial;
 }
 
-#p-link {
+#main div {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.p-link {
     border: 1px solid black;
     display: inline-block;
     height: 20px;
     width: 20px;
+    vertical-align: middle;
 }
 
 </style>
@@ -35,7 +41,10 @@ body {
 
     var Ui = {
         initialize: function () {
-            new jsPalette.Popup('p-link', { defaultColor: "#FF7400", showColorText: true });
+            $$('.p-link').each(function(item){
+                new jsPalette.Popup(item, { defaultColor: "#FF7400", showColorText: true });
+            })
+
         }
     }
 
@@ -49,7 +58,9 @@ body {
 
     <div id='main'>
 
-        <span id='p-link'> </span>
+        <div> <span class='p-link'> </span> Normal</div>
+        <div> <span class='p-link'> </span> Default Color</div>
+        <div> <span class='p-link'> </span> No Text</div>
 
     </div>
 

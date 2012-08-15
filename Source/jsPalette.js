@@ -106,7 +106,7 @@ jsPalette.Popup = new Class({
         this.palette = new jsPalette(this.paletteElement, paletteOptions);
 
         // we want the palette to open when the user clicks on the link, and close
-        $('p-link').addEvent('click', this.openPalette.bind(this));
+        this.linkElement.addEvent('click', this.openPalette.bind(this));
         document.addEvent('click', this.closePalette.bind(this));
 
         this.linkElement.setStyle('backgroundColor', this.palette.getColor());
