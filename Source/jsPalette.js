@@ -1,41 +1,3 @@
-var jsPalettePopup = new Class({
-    initialize: function (element, options) {
-        this.linkElement = $(element);
-        this.options = options || {};
-        this.options.onColorSelect = this.options.onColorSelect || $empty;
-
-        this.paletteBox = $('p-box');
-        this.paletteElement = new Element('div.js-palette').inject(this.paletteBox);
-
-        var paletteOptions = this.options;
-        paletteOptions.onClick = this.onColorSelect.bind(this);
-        this.palette = new jsPalette(this.paletteElement, paletteOptions);
-
-        // we want the palette to open when the user clicks on the link, and close
-        $('p-link').addEvent('click', this.openPalette.bind(this));
-        document.addEvent('click', this.closePalette.bind(this));
-
-        this.linkElement.setStyle('backgroundColor', this.palette.getColor());
-    },
-
-    openPalette: function (e) {
-        e.stop();
-
-        this.paletteBox.show();
-        this.paletteBox.setStyle('left', e.client.x);
-        this.paletteBox.setStyle('top', Math.max(e.client.y - this.paletteBox.getSize().y, 0));
-    },
-
-    closePalette: function () {
-        this.paletteBox.hide();
-    },
-
-    onColorSelect: function (color) {
-        this.linkElement.setStyle('backgroundColor', color);
-        this.options.onColorSelect(color);
-    }
-});
-
 var jsPalette = new Class({
     initialize: function (element, options) {
         this.element = $(element);
@@ -124,4 +86,41 @@ var jsPalette = new Class({
 
 });
 
+jsPalette.Popup = new Class({
+    initialize: function (element, options) {
+        this.linkElement = $(element);
+        this.options = options || {};
+        this.options.onColorSelect = this.options.onColorSelect || $empty;
+
+        this.paletteBox = $('p-box');
+        this.paletteElement = new Element('div.js-palette').inject(this.paletteBox);
+
+        var paletteOptions = this.options;
+        paletteOptions.onClick = this.onColorSelect.bind(this);
+        this.palette = new jsPalette(this.paletteElement, paletteOptions);
+
+        // we want the palette to open when the user clicks on the link, and close
+        $('p-link').addEvent('click', this.openPalette.bind(this));
+        document.addEvent('click', this.closePalette.bind(this));
+
+        this.linkElement.setStyle('backgroundColor', this.palette.getColor());
+    },
+
+    openPalette: function (e) {
+        e.stop();
+
+        this.paletteBox.show();
+        this.paletteBox.setStyle('left', e.client.x);
+        this.paletteBox.setStyle('top', Math.max(e.client.y - this.paletteBox.getSize().y, 0));
+    },
+
+    closePalette: function () {
+        this.paletteBox.hide();
+    },
+
+    onColorSelect: function (color) {
+        this.linkElement.setStyle('backgroundColor', color);
+        this.options.onColorSelect(color);
+    }
+});
 
