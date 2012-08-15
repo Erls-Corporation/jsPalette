@@ -1,0 +1,35 @@
+/* palette in generation */
+.js-palette { }
+
+.js-palette span {
+    border: 1px solid #222;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin-left: 2px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.js-palette span:hover {
+    border: 2px solid #222;
+}
+
+.js-palette .jsp-selected {
+    border: 2px solid #222;
+}
+
+.js-palette .jsp-desc {
+    color: #222;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* float palette */
+.jsp-popup {
+    background-color: White;
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 8px;
+    position: absolute;
+} 
