@@ -41,10 +41,10 @@ body {
 
     var Ui = {
         initialize: function () {
-            $$('.p-link').each(function(item){
-                new jsPalette.Popup(item, { defaultColor: "#FF7400", showColorText: true });
-            })
-
+            new jsPalette.Popup('t1');
+            new jsPalette.Popup('t2', { defaultColor: "#FF7400" });
+            new jsPalette.Popup('t3', { showColorText: true });
+            new jsPalette.Popup('t4', { onColorSelect: function(color) { alert(color); } });
         }
     }
 
@@ -58,9 +58,10 @@ body {
 
     <div id='main'>
 
-        <div> <span class='p-link'> </span> Normal</div>
-        <div> <span class='p-link'> </span> Default Color</div>
-        <div> <span class='p-link'> </span> No Text</div>
+        <div> <span id='t1' class='p-link'> </span> Normal</div>
+        <div> <span id='t2' class='p-link'> </span> Default Color</div>
+        <div> <span id='t3' class='p-link'> </span> With Text</div>
+        <div> <span id='t4' class='p-link'> </span> Select Event (shows popup)</div>
 
     </div>
 
