@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>jsPalette for mootools - test</title>
+
+<link href='../Source/jsPalette.css' rel="stylesheet" type="text/css"/>
+
+<style type="text/css">
+
+#main {
+    margin: 32px;
+}
+
+#p-link {
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+}
+
+</style>
+
+<script src="js-lib/mootools-core-1.4.5.js" type="text/javascript"></script>
+<script src="../Source/jsPalette.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    var Ui = {
+        initialize: function () {
+            new jsPalette.Popup('p-link', { defaultColor: "#FF7400", showColorText: true });
+        }
+    }
+
+    window.addEvent('load', Ui.initialize.bind(Ui));
+
+</script>
+
+</head>
+
+<body>
+
+    <div id='main'>
+
+        <div id='p-link'> </div>
+
+        <div id='p-box' class='jsp-popup' style='display:none'>
+        </div>
+
+    </div>
+
+</body>
+</html>
