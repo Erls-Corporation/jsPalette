@@ -26,7 +26,7 @@ var jsPalette = new Class({
     },
 
     addColorText: function () {
-        this.colorText = new Element('div.jsp-desc', '#000000').inject(this.element);
+        this.colorText = new Element('div.jsp-desc', {'text': '#000000'}).inject(this.element);
     },
 
     addColors: function () {
