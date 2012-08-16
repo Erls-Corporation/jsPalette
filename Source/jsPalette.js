@@ -141,6 +141,10 @@ jsPalette.Popup = new Class({
     openPalette: function (e) {
         e.stop();
 
+        // hide all others on the page.
+        $$('div.jsp-popup').setStyle('display', 'none');
+
+        // show palette box at the click position
         this.paletteBox.show();
         this.paletteBox.setStyle('left', e.page.x);
         this.paletteBox.setStyle('top', Math.max(e.page.y - this.paletteBox.getSize().y, 0));
