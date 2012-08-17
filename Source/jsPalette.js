@@ -1,3 +1,22 @@
+/*
+---
+description: jsPalette - mootools color selection palette
+
+license: MIT-style
+
+authors:
+- Nathan Reed
+
+requires:
+- core/1.4.5
+
+provides:
+- jsPalette
+- jsPalette.Popup
+
+...
+*/
+
 // this is now implemented in mootool.more (finally!)
 Element.implement({
    show: function() {this.setStyle('display','');},
@@ -30,7 +49,7 @@ var jsPalette = new Class({
         if (this.options.showColorText == true) {
             this.addColorText();
         }
-        
+
         this.setColor(this.options.defaultColor);
     },
 
