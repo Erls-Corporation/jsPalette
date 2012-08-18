@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width" />
 
 <title> jsPalette for Mootools - Demo </title>
 
@@ -49,6 +50,12 @@
 
 	span.p-link {
 		display: inline-block;
+	}
+
+	@media handheld, only screen and (max-device-width:480px) {
+		#t-body {
+			margin: 8px;
+		}
 	}
 
 </style>
@@ -106,12 +113,13 @@ window.addEvent('load', Ui.init.bind(Ui));
 	<div id='p-inline2'></div>
 </div>
 
-<div class='desc'>hook into the color selected event to do custom things:</div>
+<div class='desc'>you can also hook into the color selected event to do custom things:</div>
 
 <div class='box'>
 	<span id='p-popup2' class='p-link'></span>
 </div>
 
+<div class='desc'>jsPalette popups also adjust great for mobile devices. Load this page on a mobile device to see.</div>
 
 </div>
 
