@@ -2,6 +2,5 @@ name: jsPalette
 author: reednj
 category: Widgets
 tags: [color, palette]
-docs: https://github.com/reednj/jsPalette/blob/master/readme.md
+docs: https://github.com/reednj/jsPalette/blob/master/README.md
 demo: http://popacular.com/jspalette/Test/demo.html
-current: v1.0
