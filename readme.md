@@ -1,9 +1,12 @@
-# jsPalette
-Nathan Reed, reednj@gmail.com, http://twitter.com/reednj
+jsPalette
+=========
 
 jsPalette is a mootools plugin designed to make it easy for a user to select a color from a preset palette.
 
 ![popup palette](http://i.imgur.com/Iy2L2.png)
+
+How to use
+----------
 
 Given an element:
 
