@@ -176,6 +176,19 @@ jsPalette.Popup = new Class({
     onColorSelect: function (color) {
         this.linkElement.setStyle('backgroundColor', color);
         this.options.onColorSelect(color);
+    },
+
+    getColor: function () {
+        return this.palette.getColor();
+    },
+
+    setColor: function (newColor) {
+        // we do it in this order because palette.setColor does not normalization
+        // on the newColor string - so we can't pass it straight to setStyle
+        var result = this.palette.setColor(newColor);
+        this.linkElement.setStyle('backgroundColor', this.getColor());
+        return result;
     }
+
 });
 

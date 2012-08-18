@@ -53,14 +53,20 @@ span.p-link {
             new jsPalette.Popup('t1');
             new jsPalette.Popup('t2', { defaultColor: "#FF7400" });
             new jsPalette.Popup('t3', { showColorText: true });
-            new jsPalette.Popup('t4', { onColorSelect: function(color) { alert(color); } });
+            var jsp = new jsPalette.Popup('t4', {
+                onColorSelect: function(color) {
+                    alert(jsp.getColor());
+                }
+            });
 
-            new jsPalette.Popup('t5', {
+            var jsp2 = new jsPalette.Popup('t5', {
                 colors: ['#000000', '#ffffff', '#FF0000', '#00ff00', '#0000ff'],
                 defaultColor: '#0000ff'
             });
 
             new jsPalette.Popup('t6', { colors: _grayList });
+
+            jsp2.setColor('FF0000');
         }
     }
 
