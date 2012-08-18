@@ -1,0 +1,119 @@
+<!doctype html public "-//w3c//dtd html 4.0 strict//en">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title> jsPalette for Mootools - Demo </title>
+
+<link rel="stylesheet" href="./css-lib/default.css" type="text/css">
+<link rel="stylesheet" href="../Source/jsPalette.css" type="text/css">
+
+<style type='text/css'>
+	#t-body {
+		font-size: 16pt;
+
+		margin: 32px;
+		padding-bottom: 32px;
+	}
+
+	.box {
+		padding: 16px;
+	}
+
+	div.desc {
+		font-weight: bold;
+	}
+
+	#title {
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+		border-bottom: 4px solid #ddd;
+	}
+
+	#t-main {
+		font-size: 18pt;
+		font-weight: bold;
+	}
+
+	#t-sub {
+		font-size: 10pt;
+		font-weight: bold;
+	}
+
+	.p-link {
+		border: 1px solid black;
+		height: 20px;
+		width: 20px;
+		vertical-align: middle;
+	}
+
+	span.p-link {
+		display: inline-block;
+	}
+
+</style>
+
+<script src="js-lib/mootools-core-1.4.5.js" type="text/javascript"></script>
+<script src="../Source/jsPalette.js" type="text/javascript"></script>
+
+<script type='text/javascript'>
+
+var Ui = {
+	init: function() {
+		new jsPalette('p-inline', {'showColorText': true});
+		new jsPalette('p-inline2', {colors: ['#000000', '#ffffff', '#FF0000', '#00ff00', '#0000ff']});
+		new jsPalette.Popup('p-popup', {'showColorText': false, 'defaultColor':'4096EE'});
+		new jsPalette.Popup('p-popup2', {
+			'showColorText': true,
+			'defaultColor':'CDEB8B',
+			'onColorSelect': function(newColor) {
+				alert('New Color: ' + newColor);
+			}
+		});
+	}
+}
+
+window.addEvent('load', Ui.init.bind(Ui));
+
+</script>
+
+</head>
+<body>
+
+
+<div id='t-body'>
+<div id='title'>
+	<div id='t-main'>jsPalette for Mootools</div>
+	<div id='t-sub'>By Nathan Reed (<a href='http://twitter.com/reednj'>@reednj</a>) | <a href='#'>Mootools Plugin Page</a> | <a href='http://github.com/reednj/jsPalette'>Code @ Github</a> </div>
+</div>
+
+<div class='desc'>The color picker can be displayed inline (the selected color text is optional)</div>
+
+<div class='box'>
+	<div id='p-inline'></div>
+</div>
+
+<div class='desc'>or as a popup</div>
+
+<div class='box' style='vertical-align: middle;'>
+	Click to select a color:
+	<span id='p-popup' class='p-link'></span>
+</div>
+
+<div class='desc'>use the 'colors' option to set a custom palette</div>
+
+<div class='box'>
+	<div id='p-inline2'></div>
+</div>
+
+<div class='desc'>hook into the color selected event to do custom things:</div>
+
+<div class='box'>
+	<span id='p-popup2' class='p-link'></span>
+</div>
+
+
+</div>
+
+</body>
+</html>

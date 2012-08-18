@@ -26,10 +26,13 @@ body {
 
 .p-link {
     border: 1px solid black;
-    display: inline-block;
     height: 20px;
     width: 20px;
     vertical-align: middle;
+}
+
+span.p-link {
+    display: inline-block;
 }
 
 </style>
@@ -52,7 +55,7 @@ body {
             new jsPalette.Popup('t3', { showColorText: true });
             new jsPalette.Popup('t4', { onColorSelect: function(color) { alert(color); } });
 
-            new jsPalette.Popup('t5', { 
+            new jsPalette.Popup('t5', {
                 colors: ['#000000', '#ffffff', '#FF0000', '#00ff00', '#0000ff'],
                 defaultColor: '#0000ff'
             });
