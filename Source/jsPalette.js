@@ -162,11 +162,21 @@ jsPalette.Popup = new Class({
 
         // hide all others on the page.
         $$('div.jsp-popup').setStyle('display', 'none');
+        this.paletteBox.show();
 
         // show palette box at the click position
-        this.paletteBox.show();
-        this.paletteBox.setStyle('left', e.page.x);
-        this.paletteBox.setStyle('top', Math.max(e.page.y - this.paletteBox.getSize().y, 0));
+        var boxSize = this.paletteBox.getSize();
+        var linkSize = this.linkElement.getSize();
+        var linkPosition = this.linkElement.getPosition();
+        
+        var left = linkPosition.x - 8;
+        var top = linkPosition.y - boxSize.y - 9;
+
+        
+        this.paletteBox.setStyle('left', left);
+        this.paletteBox.setStyle('top', Math.max(top, 0));
+
+        
     },
 
     closePalette: function () {

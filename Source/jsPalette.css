@@ -39,6 +39,7 @@
     position: absolute;
 }
 
+/* method from http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/ */
 .jsp-popup:after, .jsp-popup:before {
     border: solid transparent;
     content: ' ';
@@ -68,6 +69,10 @@
         margin:0;
         padding: 8px 0;
         width: 100%;
+    }
+
+    .jsp-popup:after, .jsp-popup:before {
+        display: none;
     }
 
     .jsp-popup  .jsp-cont {
